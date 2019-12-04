@@ -1,0 +1,20 @@
+﻿<Window x:Class="LoadingPhotoMultithreading.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoadingPhotoMultithreading"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="215*"/>
+            <RowDefinition Height="126*"/>
+            <RowDefinition Height="93*"/>
+        </Grid.RowDefinitions>
+        <RichTextBox Grid.Row="0"></RichTextBox>
+        <TextBox Name="fileUriSourse" Grid.Row="1" Margin="0,0,200,0" Height="50" Width="160"></TextBox>
+        <Button Grid.Row="1" Margin="200,0,0,0" Content="Download" Click="Download" Height="50" Width="160"></Button>
+        <ProgressBar x:Name="downloadingProgressBar" Grid.Row="2" Minimum="0" Maximum="320" Value="0" IsIndeterminate="False" Height="40" Width="320" Foreground="ForestGreen"></ProgressBar>
+    </Grid>
+</Window>
